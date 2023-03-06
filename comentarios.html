@@ -11,6 +11,9 @@
 
   gtag('config', 'G-2LM7LW5BND');
 </script>
+<script>
+	document.querySelector("#submit").addEventListener("click", () => { "ga('send', 'event', 'Category', 'Action', 'Label', 'Value');"})
+</script>
 <style>
 	body {
 	  margin: auto;

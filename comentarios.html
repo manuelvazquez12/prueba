@@ -61,15 +61,17 @@
 		<div style="padding-left:16px">
 			<h2 id="Comentarios">Sección de comentarios</h2>
 				<form>
-						Comentario:<br>
-							<textarea rows="8" cols="40"></textarea><br>
+						Comentario:
+					<br>
+							<textarea class="form" id="comment" rows="8" cols="40"></textarea>
+					<br>
 					<br>
 						Correo electrónico:
-						<input type="text" name="correo">
+						<input class="form" id= "email" type="text" name="correo">
 					<br>
 						<input type="radio" name="correo" value="acepto"> Acepto recibir noticias y correos comerciales
 					<br><br>
-						<input id="submit" type="submit" value="Submit">
+						<input class="form" id="submit" type="submit" value="Submit">
 				</form>
 				<hr>
 		</div>
@@ -77,7 +79,7 @@
 	<script>
 	document.querySelector("#submit").addEventListener("click", () => {  
 		gtag("event", "event", {
-			"emailAdress": document.querySelectorAll("input")[0].value,
+			"emailAdress": document.querySelectorAll("email").value,
   			"event_category": "category",
   			"event_label": "label",
   			"value": "value"

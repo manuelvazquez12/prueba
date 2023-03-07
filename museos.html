@@ -111,10 +111,10 @@
 		</div>
 	</body>
 		<script>
-	document.querySelectorAll(".checkbox").addEventListener("click", () => {  
+	document.querySelector("#checkbox_bunker", "#checkbox_pergamon").addEventListener("click", () => {  
 		gtag("event", "event", {
   			"event_category": "category",
-  			"checkbox_museum": document.querySelectorAll(".checkbox").addEventListener("click").id,
+  			"checkbox_museum": document.querySelector("#checkbox_bunker, #checkbox_pergamon").id,
   			"value": "value"
 		});
 });

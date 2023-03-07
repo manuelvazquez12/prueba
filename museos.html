@@ -111,11 +111,11 @@
 		</div>
 	</body>
 		<script>
-	document.querySelectorAll(".checkbox").addEventListener("click", () => {  
+	document.querySelectorAll(".checkbox")[0].addEventListener("click", () => {  
 		gtag("event", "event", {
   			"event_category": "category",
-  			"checkbox_museum": document.querySelectorAll(".checkbox").id,
-  			"value": document.querySelectorAll(".checkbox").value
+  			"checkbox_museum": document.querySelectorAll(".checkbox")[0].id,
+  			"value": document.querySelectorAll(".checkbox")[0].value
 		});
 });
 			</script>

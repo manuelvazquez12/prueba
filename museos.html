@@ -113,9 +113,9 @@
 		<script>
 	document.querySelector("#checkbox_bunker").addEventListener("click", () => {  
 		gtag("event", "event", {
-  			"event_category": document.querySelector("#checkbox_bunker").class,
-  			"checkbox_museum": document.querySelector("#checkbox_bunker").id,
-  			"museum": document.querySelector("#checkbox_bunker").value
+  			"event_category": document.querySelectorAll("#checkbox_bunker").class,
+  			"checkbox_museum": document.querySelectorAll("#checkbox_bunker").id,
+  			"museum": document.querySelectorAll("#checkbox_bunker").value
 
 		});
 });

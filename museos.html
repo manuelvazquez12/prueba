@@ -126,10 +126,10 @@ for (let i = 0; i < checkboxes.length; i++) {
 const links = document.querySelectorAll(".link");
 for (let i = 0; i < links.length; i++) {
   links[i].addEventListener("click", () => {  
-    const linkValues = Array.from(checkboxes).map(link =>link.value);
-    gtag("event", "checkbox_click", {
-      "event_category": "checkboxes",
-      "checkbox_values": linkValues.join(",")
+    const linkValues = Array.from(links).map(link =>link.value);
+    gtag("event", "link_click", {
+      "event_category": "links",
+      "link_values": linkValues.join(",")
     });
   });
 }

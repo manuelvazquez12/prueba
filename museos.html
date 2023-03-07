@@ -73,35 +73,35 @@
 						<td>Bunker Museum</td>
 						<td>4/5</td>
 						<td>5€</td>
-						<td><a href="https://www.berlin-welcomecard.de/es/socio/berlin-story-bunker-tour" target= "_blank">Comprar</a></td>
+						<td><a classs="link" id="link_bunker" href="https://www.berlin-welcomecard.de/es/socio/berlin-story-bunker-tour" target= "_blank">Comprar</a></td>
 						<td><input class="checkbox" id="checkbox_bunker" type="checkbox" name="museo" value="Bunker_Museum"></td>
 					</tr>
 					<tr>
 						<td>Pergamonmuseum</td>
 						<td>3/5</td>
 						<td>15€</td>
-						<td><a href="https://www.museumsportal-berlin.de/es/museos/pergamonmuseum/" target= "_blank">Comprar</a></td>
+						<td><a class="link" id="link_perga" href="https://www.museumsportal-berlin.de/es/museos/pergamonmuseum/" target= "_blank">Comprar</a></td>
 						<td><input class="checkbox" id="checkbox_pergamon" type="checkbox" name="museo" value="Pergamonmuseum"></td>
 					</tr>
 					<tr>
 						<td>Neues Museum</td>
 						<td>5/5</td>
 						<td>10€</td>
-						<td><a href="https://www.museumsportal-berlin.de/es/museos/neues-museum/" target= "_blank">Comprar</a></td>
+						<td><a class="link" id="link_neues" href="https://www.museumsportal-berlin.de/es/museos/neues-museum/" target= "_blank">Comprar</a></td>
 						<td><input class="checkbox" id="checkbox_neues" type="checkbox" name="museo" value="Neues_Museum"></td>
 					</tr>
 					<tr>
 						<td>Alte Nationalgalerie</td>
 						<td>2/5</td>
 						<td>50€</td>
-						<td><a href="https://www.museumsportal-berlin.de/es/museos/alte-nationalgalerie/" target= "_blank">Comprar</a></td>
+						<td><a class="link" id="link_alte" href="https://www.museumsportal-berlin.de/es/museos/alte-nationalgalerie/" target= "_blank">Comprar</a></td>
 						<td><input class="checkbox" id="checkbox_alte" type="checkbox" name="museo" value="Alte_Nationalgalerie"></td>
 					</tr>
 					<tr>
 						<td>Bode-Museum</td>
 						<td>2.5/5</td>
 						<td>25€</td>
-						<td><a href="https://www.museumsportal-berlin.de/es/museos/bode-museum/" target= "_blank">Comprar</a></td>
+						<td><a class="link" id="link_bode" href="https://www.museumsportal-berlin.de/es/museos/bode-museum/" target= "_blank">Comprar</a></td>
 						<td><input class="checkbox" id="checkbox_bode" type="checkbox" name="museo" value="Bode-Museum"></td>
 					</tr>
 				</tbody>
@@ -144,6 +144,13 @@
   			"event_category": "category",
   			"checkbox_museum": document.querySelector("#checkbox_bode").id,
   			"value": document.querySelector("#checkbox_bode").value
+		});
+});
+					document.querySelector("#link_bunker").addEventListener("click", () => {  
+		gtag("event", "event", {
+  			"event_category": "category",
+  			"link_id": document.querySelector("#link_bunker").id,
+  			"value": document.querySelector("#link_bunker").href
 		});
 });
 </script>

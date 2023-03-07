@@ -126,7 +126,7 @@ for (let i = 0; i < checkboxes.length; i++) {
 const links = document.querySelectorAll(".link");
 for (let i = 0; i < links.length; i++) {
   links[i].addEventListener("click", () => {
-    const linkValues = Array.from(links).map(link => link.id);  
+    const linkValues = Array.from(links).map(link => link.href);  
     gtag("event", "link_click", {
       "event_category": "links",
       "link_values": linkValues.join(",")

@@ -112,13 +112,15 @@
 	</body>
 		<script>
 
-	for (let i = 0; i < checkboxes.length; i++) 
-	document.querySelectorAll(".checkbox")[i].addEventListener("click", () => {  
-		gtag("event", "checkbox_click", {
-  			"event_category": "checkboxes",
-  			"checkbox_museum": document.querySelectorAll(".checkbox")[i].id,
-  			"value": document.querySelectorAll(".checkbox")[i].value
-		});
-});
+const checkboxes = document.querySelectorAll(".checkbox");
+for (let i = 0; i < checkboxes.length; i++) {
+  checkboxes[i].addEventListener("click", () => {  
+    const checkboxValues = Array.from(checkboxes).map(checkbox => checkbox.checked ? checkbox.value : null).filter(value => value !== null);
+    gtag("event", "checkbox_click", {
+      "event_category": "checkboxes",
+      "checkbox_values": checkboxValues.join(",")
+    });
+  });
+}
 			</script>
 </HTML>

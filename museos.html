@@ -113,7 +113,7 @@
 		<script>
 	document.querySelector("#checkbox_bunker").addEventListener("click", () => {  
 		gtag("event", "event", {
-  			"event_category": "category",
+  			"event_category": document.querySelector("#checkbox_bunker").value,
   			"checkbox_museum": document.querySelector("#checkbox_bunker").id,
   			"value": "value"
 		});

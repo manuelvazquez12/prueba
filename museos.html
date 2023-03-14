@@ -10,15 +10,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
 		<title>Berlín: Museos</title>
-		<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2LM7LW5BND"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-2LM7LW5BND');
-</script>
 <style>
 	body {
 	  margin: auto;
@@ -122,28 +113,4 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<hr>
 		</div>
 	</body>
-		<script>
-
-const checkboxes = document.querySelectorAll(".checkbox");
-for (let i = 0; i < checkboxes.length; i++) {
-  checkboxes[i].addEventListener("click", () => {  
-    const checkboxValues = Array.from(checkboxes).map(checkbox => checkbox.checked ? checkbox.value : null).filter(value => value !== null);
-    gtag("event", "checkbox_click", {
-      "event_category": "checkboxes",
-      "checkbox_values": checkboxValues.join(",")
-    });
-  });
-}
-
-const links = document.querySelectorAll(".link");
-for (let i = 0; i < links.length; i++) {
-  links[i].addEventListener("click", () => {
-    const linkValues = Array.from(links).map(link => link.href);  
-    gtag("event", "link_click", {
-      "event_category": "links",
-      "link_values": linkValues.join(",")
-    });
-  });
-}
-			</script>
 </HTML>
